@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home'
-import Cart from '../views/Cart'
-import Profile from '../views/Profile'
-import Category from '../views/Category'
+import Home from 'views/home/Home'
+import Cart from 'views/cart/Cart'
+import Profile from 'views/profile/Profile'
+import Category from 'views/category/Category'
 Vue.use(VueRouter)
 
 const routes = [

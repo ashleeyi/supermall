@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import MySwiper from 'components/MySwiper'
+import MySwiper from 'views/home/childComps/HomeSwiper'
 export default {
   name: 'Home',
   components: {
-    MySwiper
+    HomeSwiper
   },
   data(){
     return {
