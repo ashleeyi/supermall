@@ -1,8 +1,19 @@
 import Vue from 'vue'
+import Router from 'vue-router'
+
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import axios from 'axios'
+
+
+const originalReplace = Router.prototype.replace
+Router.prototype.replace = function replace(location) {
+  return originalReplace.call(this, location).catch(err => err)
+}
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 Vue.config.productionTip = false
 Vue.config.devtools = true
@@ -12,25 +23,18 @@ new Vue({
   render: function (h) { return h(App) }
 }).$mount('#app')
 
-
-
-const instance1= axios.create({
-  baseURL : "",
-  timeout :"5000"
-})
-const instance2= axios.create({
-  baseURL : "",
-  timeout :"5000"
-})
-
-instance1({
-  url:""
-}).then(res =>{
-  console.log(res);
+/**
+ * 
+axios({
+  url:'http://123.207.32.32:8000/home/multidata',
+  method:'get'
+}).then( res => {
+  console.log(res)
+}).catch( err => {
+  console.log(err)
 })
 
-instance2({
-  url:""
-}).then(res =>{
-  console.log(res);
-})
+ * 
+ */
+
+

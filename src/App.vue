@@ -6,8 +6,7 @@
 </template> 
 
 <script>
-import MainTabBar from 'components/MainTabBar'
-import axios from 'axios'
+import MainTabBar from 'components/content/MainTabBar'
 export default {
   name : "App",
   components : {
@@ -23,3 +22,6 @@ export default {
   
 }
 </script>
+<style>
+  @import "~assets/css/base.css";
+</style>

@@ -10,7 +10,7 @@
 // @ is an alias to /src
 import HelloWorld from '../HelloWorld.vue'
 import TabBar from '../tabbar/TabBar.vue'
-import test from  "../test.js"
+import test from  ""
 export default {
   name: 'Home',
   data(){
